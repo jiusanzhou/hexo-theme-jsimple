@@ -7,10 +7,10 @@ shortName: 说
 fullHttps: true
 
 # favicon
-favicon: /images/favicon.png
+favicon: /favicon.ico
 # unique avatar
 avatarShow: false
-avatarImage: /images/favicon.png
+avatarImage: /favicon.ico
 
 # Home page sort type: -1: newer first，1: older first.
 homePageSortType: -1
