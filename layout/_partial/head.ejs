@@ -2,7 +2,7 @@
 <meta http-equiv="refresh" content="0;url=<%= config.url %>/warn.html">
 <![endif]-->
 <meta charset="utf-8">
-<% if (custom.fullHttps){ %>
+<% if (theme.fullHttps){ %>
 <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <% } %>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -11,8 +11,8 @@
 <meta http-equiv="mobile-agent" content="format=html5; url=<%= config.url %>">
 <meta name="author" content="<%= config.author %>">
 <%- css(['/css/SimpleStyle.min.css']) %>
-<% if (custom.favicon){ %>
-<%- favicon_tag(custom.favicon) %>
+<% if (theme.favicon){ %>
+<%- favicon_tag(theme.favicon) %>
 <% } %>
 <%
 var siteTitle = page.title;

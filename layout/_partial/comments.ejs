@@ -1,4 +1,4 @@
-<% if (custom.disqus_shortname && page.comments) { %>
+<% if (theme.disqus_shortname && page.comments) { %>
 <div id="disqus_thread"></div>
 <script>
     /**
@@ -10,7 +10,7 @@
         this.page.identifier = '<%- post.path %>';
     };
     (function () { // DON'T EDIT BELOW THIS LINE
-        var d = document, disqus_shortname = '<%= custom.disqus_shortname %>', s = d.createElement('script');
+        var d = document, disqus_shortname = '<%= theme.disqus_shortname %>', s = d.createElement('script');
         s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
@@ -18,23 +18,23 @@
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
         Disqus.</a></noscript>
-<% } else if (custom.gitment.enable) { %>
+<% } else if (theme.gitment.enable) { %>
 <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <div id="gitment-container"></div>
 <script type="text/javascript">
     var gitment = new Gitment({
         id: document.location.href,
-        owner: '<%= custom.gitment.githubID %>',
-        repo: '<%= custom.gitment.repo %>',
+        owner: '<%= theme.gitment.githubID %>',
+        repo: '<%= theme.gitment.repo %>',
         oauth: {
-            client_id: '<%= custom.gitment.ClientID %>',
-            client_secret: '<%= custom.gitment.ClientSecret %>',
+            client_id: '<%= theme.gitment.ClientID %>',
+            client_secret: '<%= theme.gitment.ClientSecret %>',
         }
     });
     gitment.render('gitment-container');
 </script>
-<% if (custom.gitment.lazy) { %>
+<% if (theme.gitment.lazy) { %>
 <script>
     document.getElementById("gitment-display-button").style.display = "none";
     document.getElementById("gitment-container").style.display = "block";

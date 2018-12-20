@@ -1,15 +1,15 @@
-<% if (custom.tentcentAnalyticsId){ %>
+<% if (theme.tentcentAnalyticsId){ %>
 <!-- Tencent Analytics -->
-<script type="text/javascript" src="//tajs.qq.com/stats?sId=<%= custom.tentcentAnalyticsId %>" charset="UTF-8"></script>
+<script type="text/javascript" src="//tajs.qq.com/stats?sId=<%= theme.tentcentAnalyticsId %>" charset="UTF-8"></script>
 <% } %>
-<% if (custom.googleAnalyticsId){ %>
+<% if (theme.googleAnalyticsId){ %>
 <!-- Google Analytics -->
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=<%= custom.googleAnalyticsId %>"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-101239170-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', '<%= custom.googleAnalyticsId %>');
+  gtag('config', '<%= theme.googleAnalyticsId %>');
 </script>
 <% } %>

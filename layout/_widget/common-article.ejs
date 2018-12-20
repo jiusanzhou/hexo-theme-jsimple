@@ -32,8 +32,8 @@
         </div>
         <% } %>
     </article>
-    <% if(post.layout && post.layout === 'post' && custom.postDeclare) { %>
-    <p><%= custom.postDeclare %></p>
+    <% if(post.layout && post.layout === 'post' && theme.postDeclare) { %>
+    <p><%= theme.postDeclare %></p>
     <% } %>
     <%- partial('_partial/comments', {post: post}) %>
 </div>
